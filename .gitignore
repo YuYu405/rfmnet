@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dataset
+R2C7K/
+
+# Training outputs
+ckpt/
+
+# Snapshot weights and large artifacts
+snapshot/base/*.pth
+snapshot/base/*.pt
+snapshot/base/*.ckpt
+snapshot/saved_model/*.pth
+snapshot/saved_model/*.pt
+snapshot/saved_model/*.ckpt
+snapshot/**/*.zip
+snapshot/**/*.npy
+snapshot/**/*.npz
+
+# Keep directory structure
+!snapshot/base/.gitkeep
+!snapshot/saved_model/.gitkeep
