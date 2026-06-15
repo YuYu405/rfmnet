@@ -172,7 +172,7 @@ if __name__ == '__main__':
     parser.add_argument('--decay', type=float, default=5e-4, help='weight decay')
     parser.add_argument('--power', type=float, default=0.9, help='poly lr power')
     parser.add_argument('--optimizer_name', type=str, default='Adam', help='optimizer')
-    parser.add_argument('--batchsize', type=int, default=8, help='training batch size')
+    parser.add_argument('--batchsize', type=int, default=1, help='training batch size')
     parser.add_argument('--trainsize', type=int, default=512, help='training dataset size')
     parser.add_argument('--clip', type=float, default=0.5, help='gradient clipping margin')
     parser.add_argument('--dim', type=int, default=64, help='dimension of our model')

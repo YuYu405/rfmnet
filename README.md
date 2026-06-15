@@ -1,9 +1,8 @@
-# RFMNet: Referring Camouflaged Object Detection
+# RFMNet: Referring Camouflaged Object Detection With Multi-Context Cross-Attention
 
 Official code for our paper:
 
-**Referring Camouflaged Object Detection With Multi-Context Overlapped Windows Cross-Attention**  
-Paper link: https://arxiv.org/abs/2511.13249
+**Referring Camouflaged Object Detection With Multi-Context Cross-Attention**  
 
 This repository provides the training and testing code for `RFMNet` on the **R2C7K** dataset.
 
@@ -112,7 +111,7 @@ Please place the files as follows:
 ```text
 snapshot/
 ├── base/
-│   ├── swins_cod_base_45_416.pth
+│   ├── swins_cod_base_45.pth
 │   └── swins_base_sod_45.pth
 └── saved_model/
     └── rfmnet.pth
@@ -137,7 +136,7 @@ Example:
 python train.py \
   --epoch 500 \
   --lr_0 1.5e-4 \
-  --batchsize 1 \
+  --batchsize 4 \
   --trainsize 512 \
   --shot 1 \
   --dim 64 \
@@ -150,14 +149,6 @@ Training checkpoints will be saved to:
 
 ```text
 ./ckpt/<exp_name>/
-```
-
-For example:
-
-```text
-./ckpt/rfmnet/rfmnet_50.pth
-./ckpt/rfmnet/rfmnet_100.pth
-...
 ```
 
 ## Testing
@@ -197,18 +188,6 @@ snapshot/saved_model/
 - `test.py` loads the final trained checkpoint from `snapshot/saved_model/rfmnet.pth`
 - If you change file names or paths, please update them in the scripts accordingly
 
-## Citation
-
-If you find this repository useful, please cite our paper.
-
-```bibtex
-@article{wen2025referring,
-  title={Referring Camouflaged Object Detection With Multi-Context Overlapped Windows Cross-Attention},
-  author={Wen, Yu and Gao, Shuyong and Zhang, Shuping and Huang, Miao and Tao, Lili and Yang, Han and Xing, Haozhe and Zhang, Lihe and Hou, Boxue},
-  journal={arXiv preprint arXiv:2511.13249},
-  year={2025}
-}
-```
 
 ## Acknowledgement
 
